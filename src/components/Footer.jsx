@@ -1,0 +1,1 @@
+export default function Footer(){return <footer className="footer"><span>© {new Date().getFullYear()} Zamir Haider</span><span>Designed with clarity & purpose.</span></footer>}

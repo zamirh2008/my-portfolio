@@ -1,0 +1,5 @@
+import { NavLink } from 'react-router-dom';
+const links = [['/','Home'],['/about','About'],['/skills','Skills'],['/experience','Experience'],['/projects','Projects'],['/certificates','Certificates'],['/education','Education'],['/contact','Contact']];
+export default function Sidebar({ theme, onToggle }) {
+ return <aside className="sidebar"><NavLink to="/" className="brand">ZH<span>.</span></NavLink><div className="side-intro"><span className="eyebrow">PORTFOLIO / 2026</span><p>WordPress development, IT support & administration.</p></div><nav className="side-nav" aria-label="Main navigation">{links.map(([to,label],i)=><NavLink key={to} to={to} end={to==='/'}><span className="nav-index">0{i+1}</span>{label}</NavLink>)}</nav><div className="side-bottom"><button className="theme-button" onClick={onToggle} aria-label="Toggle colour theme">{theme==='light'?'◐':'☼'} <span>{theme==='light'?'Dark appearance':'Light appearance'}</span></button><span className="side-location">GUJRAT · PAKISTAN</span></div></aside>
+}

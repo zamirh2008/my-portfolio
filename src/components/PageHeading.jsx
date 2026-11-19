@@ -1,0 +1,1 @@
+export default function PageHeading({ eyebrow, title, intro }) { return <header className="page-heading"><span className="eyebrow">{eyebrow}</span><h1>{title}</h1>{intro && <p>{intro}</p>}</header>; }
